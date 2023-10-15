@@ -1,167 +1,265 @@
 // base
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
 }
 body {
- font-family: 'Inter', sans-serif;
- font-size: 16px;
- line-height: 21px;
- display: flex;
- flex-direction: column;
- height: 100%;
- position: relative;
- z-index: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 .main {
   flex: 1 0 auto;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
 
 // button
 .button {
- &__primary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 150px;
-  min-width: 150px;
-  width: 100%;
-  background-color: #000;
-  padding: 13.5px 20px;
-  border-radius: 30px;
-  color: #fff;
-  text-align: center;
-  border: 1px solid #000;
-  transition: all 0.3s;
-  opacity: 1;
-  &:hover {
-   background-color: transparent;
-   color: #000;
+  &__primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    min-width: 150px;
+    width: 100%;
+    background-color: #000;
+    padding: 13.5px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #000;
+    transition: all 0.3s;
+    opacity: 1;
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
   }
- }
 }
 
 
 // page
 .black {
- background-color: #000;
+  background-color: #000;
 }
 a {
- display: inline-block;
- text-decoration: none;
- cursor: pointer;
- transition: all 0.3s;
- color: #000;
- &:hover {
-  opacity: 0.5;
- }
-}
-.container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 15px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #000;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .header {
- &__wrapper {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 99;
-  width: 100%;
- }
- &__inner {
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
- }
- &__logo {
-  padding-right: 40px;
- }
- &__nav {
-  ul {
-   display: flex;
-   align-items: center;
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+    width: 100%;
   }
-  li+li {
-   padding-left: 40px;
+  &__inner {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
   }
-  a {
-   font-weight: bold;
+  &__logo {
+    padding-right: 40px;
   }
- }
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    li+li {
+      padding-left: 40px;
+    }
+    a {
+      font-weight: bold;
+    }
+  }
 }
 
-// main
+// banner
 .banner {
- &__wrapper {
-  min-height: 1080px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- }
+  &__wrapper {
+    min-height: 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+  &.choosed {
+    display: block;
+    animation: bannerOn 2s;
+  }
+  }
+  h1 {
+    display: none;
+  }
 }
 
+// options
+.options {
+  &__wrapper {
+    padding: 46px 0 90px;
+  }
+  &__inner {}
+  &__info {
+    max-width: 558px;
+    width: 100%;
+    margin: 0 auto 80px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 40px;
+    &.effect {
+      animation: optionOn 2s;
+    }
+    li {
+      padding: 47px 54px;
+      border: 1px solid #777;
+      border-radius: 20px;
+      cursor: pointer;
+      &.choosed {
+        display: none;
+      }
+      &:hover {
+        button img {
+          transform: scale(1.05);
+        }
+      }
+      button {
+        cursor: pointer;
+        img {
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
 
 // footer
 .footer {
- flex: 0 0 auto;
- // .footer__wrapper
- &__wrapper {
-  position: relative;
-  z-index: 1;
- }
- // .footer__inner
- &__inner {
-  padding: 210px 0 0;
-  a,
-  p {
-   color: #fff;
-   font-weight: bold;
+  flex: 0 0 auto;
+  // .footer__wrapper
+  &__wrapper {
+    position: relative;
+    z-index: 1;
   }
- }
- // .footer__info
- &__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px 0;
-  a {
-   width: 100%;
+  // .footer__inner
+  &__inner {
+    padding: 210px 0 0;
+    a,
+    p {
+      color: #fff;
+      font-weight: bold;
+    }
   }
- }
- // .footer__contacts
- &__contacts {
-  a {
-   margin-bottom: 20px;
-   text-align: center;
+  // .footer__info
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+    a {
+      width: 100%;
+    }
   }
- }
- // .footer__block
- &__block {
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  // .footer__block_text
-  &_text {
-   display: flex;
-   margin-right: 20px;
-   p+p {
-    margin-left: 20px;
-   }
+  // .footer__contacts
+  &__contacts {
+    a {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
- }
- // .footer__nav
- &__nav {
-  a+a {
-   margin-left: 20px;
+  // .footer__block
+  &__block {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    // .footer__block_text
+    &_text {
+      display: flex;
+      margin-right: 20px;
+      p+p {
+        margin-left: 20px;
+      }
+    }
   }
- }
+  // .footer__nav
+  &__nav {
+    a+a {
+      margin-left: 20px;
+    }
+  }
+}
+
+@keyframes bannerOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes optionOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
