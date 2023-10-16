@@ -9,7 +9,7 @@ body {
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -18,6 +18,7 @@ body {
 }
 .main {
   flex: 1 0 auto;
+  // overflow-x: hidden;
 }
 .container {
   max-width: 1200px;
@@ -126,10 +127,10 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
-  &.choosed {
-    display: block;
-    animation: bannerOn 2s;
-  }
+    &.choosed {
+      display: block;
+      animation: bannerOn 2s;
+    }
   }
   h1 {
     display: none;
@@ -141,7 +142,7 @@ a {
   &__wrapper {
     padding: 46px 0 90px;
   }
-  &__inner {}
+  // &__inner {}
   &__info {
     max-width: 558px;
     width: 100%;
@@ -184,13 +185,129 @@ a {
   }
 }
 
+// description
+.description {
+  &__wrapper {
+    padding: 90px 0 180px;
+    h2 {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin: 0 auto 40px;
+      max-width: 654px;
+      width: 100%;
+      font-weight: normal;
+    }
+  }
+  // &__inner {}
+  &__case {
+    max-width: 625px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 260px;
+    width: 100%;
+    padding-right: 30px;
+    p+p {
+      padding-top: 20px;
+    }
+  }
+  &__image {
+    img {
+      display: none;
+      &.choosed {
+        display: block;
+        animation: imageOn 2s;
+      }
+    }
+  }
+}
+
+// advantages
+.advantages {
+  &__wrapper {
+    background-color: #FAFAFA;
+    padding-bottom: 20px;
+    h2 {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin-bottom: 40px;
+    }
+  }
+  // &__inner {}
+  &__block {
+    padding: 80px 0;
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: none;
+      &.choosed {
+        display: block;
+        animation: advantagesImage 2s;
+      }
+    }
+  }
+  &__case {
+    padding: 80px 0;
+    h2 {
+      margin-bottom: 40px;
+    }
+    p {
+      max-width: 403px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      b {
+        display: block;
+        font-size: 210px;
+        margin: 0 auto 40px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.quality {
+  &__wrapper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1845px;
+    position: relative;
+    z-index: 1;
+    &::before {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      min-height: 1350px;
+      z-index: 1;
+      left: 0;
+      bottom: -200px;
+    }
+  }
+}
+
 // footer
 .footer {
   flex: 0 0 auto;
   // .footer__wrapper
   &__wrapper {
     position: relative;
-    z-index: 1;
+    z-index: -1;
   }
   // .footer__inner
   &__inner {
@@ -253,6 +370,28 @@ a {
   }
 }
 @keyframes optionOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes imageOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes advantagesImage {
   0% {
     opacity: 0;
   }

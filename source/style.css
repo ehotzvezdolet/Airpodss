@@ -10,7 +10,7 @@ body {
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -173,12 +173,116 @@ a:hover {
   transition: all 0.5s;
 }
 
+.description__wrapper {
+  padding: 90px 0 180px;
+}
+.description__wrapper h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.description__wrapper h3 {
+  margin: 0 auto 40px;
+  max-width: 654px;
+  width: 100%;
+  font-weight: normal;
+}
+.description__case {
+  max-width: 625px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.description__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 260px;
+  width: 100%;
+  padding-right: 30px;
+}
+.description__text p + p {
+  padding-top: 20px;
+}
+.description__image img {
+  display: none;
+}
+.description__image img.choosed {
+  display: block;
+  animation: imageOn 2s;
+}
+
+.advantages__wrapper {
+  background-color: #FAFAFA;
+  padding-bottom: 20px;
+}
+.advantages__wrapper h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.advantages__wrapper h3 {
+  margin-bottom: 40px;
+}
+.advantages__block {
+  padding: 80px 0;
+}
+.advantages__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advantages__image img {
+  display: none;
+}
+.advantages__image img.choosed {
+  display: block;
+  animation: advantagesImage 2s;
+}
+.advantages__case {
+  padding: 80px 0;
+}
+.advantages__case h2 {
+  margin-bottom: 40px;
+}
+.advantages__case p {
+  max-width: 403px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.advantages__case p b {
+  display: block;
+  font-size: 210px;
+  margin: 0 auto 40px;
+  font-weight: bold;
+}
+
+.quality__wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1845px;
+  position: relative;
+  z-index: 1;
+}
+.quality__wrapper::before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  min-height: 1350px;
+  z-index: 1;
+  left: 0;
+  bottom: -200px;
+}
+
 .footer {
   flex: 0 0 auto;
 }
 .footer__wrapper {
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 .footer__inner {
   padding: 210px 0 0;
@@ -230,6 +334,28 @@ a:hover {
   }
 }
 @keyframes optionOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes imageOn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes advantagesImage {
   0% {
     opacity: 0;
   }

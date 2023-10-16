@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
  const bannerList = document.querySelectorAll('.banner__wrapper');
  const optionsListItems = document.querySelectorAll('.options__list > li');
- const optionsList = document.querySelector('.options__list'); 
+ const optionsList = document.querySelector('.options__list');
+ const descriptionImageList = document.querySelectorAll('.description__image > img'); 
+ const advantagesImageList = document.querySelectorAll('.advantages__image > img'); 
 
  // add artibute for banner
  for (let i = 0; i < bannerList.length; i++) {
@@ -11,6 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
  // add atribute for option button
  for (let i = 0; i < optionsListItems.length; i++) {
   const optionsListAttr = optionsListItems[i].setAttribute('data-content', i);
+ }
+
+ // add atribute for description image
+ for (let i=0; i < descriptionImageList.length; i++) {
+  const descriptionImageListAttr = descriptionImageList[i].setAttribute('data-content', i);
+ }
+
+ // add atribute for advantages image
+ for (let i=0; i < advantagesImageList.length; i++) {
+  const advantagesImageListAttr = advantagesImageList[i].setAttribute('data-content', i);
  }
 
  // choose options button
@@ -33,6 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
      const bannerAttr = banner.getAttribute('data-content');
      if (optionAttr == bannerAttr) banner.classList.add('choosed');
      else banner.classList.remove('choosed');
+    });
+    // change description image
+    descriptionImageList.forEach(image => {
+     const imageAttr = image.getAttribute('data-content');
+     if (optionAttr == imageAttr) image.classList.add('choosed');
+     else image.classList.remove('choosed');
+    });
+    // change advantages image
+    advantagesImageList.forEach(image => {
+     const imageAttr = image.getAttribute('data-content');
+     if (optionAttr == imageAttr) image.classList.add('choosed');
+     else image.classList.remove('choosed');
     });
    }
   });
