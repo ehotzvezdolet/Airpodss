@@ -1,3 +1,4 @@
+// 1999 991 767 575
 // base
 * {
   box-sizing: border-box;
@@ -18,6 +19,9 @@ body {
   height: 100%;
   position: relative;
   z-index: 1;
+  @media (max-width: 767px) {
+      font-size: 14px;
+  }
 }
 .main {
   flex: 1 0 auto;
@@ -40,6 +44,9 @@ h6 {
 h2 {
   font-size: 36px;
   line-height: 1.2;
+  @media (max-width: 767px) {
+      font-size: 26px;
+  }
 }
 button {
   background-color: transparent;
@@ -168,12 +175,18 @@ a {
 .options {
   &__wrapper {
     padding: 46px 0 90px;
+    @media (max-width: 767px) {
+     padding: 40px 0; 
+    }
   }
   // &__inner {}
   &__info {
     max-width: 558px;
     width: 100%;
     margin: 0 auto 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 40px; 
+    }
     h2 {
       margin-bottom: 20px;
     }
@@ -185,7 +198,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      gap: 20px;
+    }
     &.effect {
       animation: optionOn 2s;
     }
@@ -194,6 +211,18 @@ a {
       border: 1px solid #777;
       border-radius: 20px;
       cursor: pointer;
+      @media (max-width: 1999px) {
+        flex-basis: calc(35% - 20px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 767px) {
+        flex-basis: calc(40% - 10px);
+      }
+      @media (max-width: 575px) {
+        flex-basis: calc(50% - 10px);
+      }
       &.choosed {
         display: none;
       }
@@ -216,15 +245,24 @@ a {
 .description {
   &__wrapper {
     padding: 90px 0 180px;
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
     h2 {
       font-size: 64px;
       margin-bottom: 20px;
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
     }
     h3 {
       margin: 0 auto 40px;
       max-width: 654px;
       width: 100%;
       font-weight: normal;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
     }
   }
   // &__inner {}
@@ -234,6 +272,9 @@ a {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
   }
   &__text {
     display: flex;
@@ -242,6 +283,12 @@ a {
     max-width: 260px;
     width: 100%;
     padding-right: 30px;
+    @media (max-width: 575px) {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
     p+p {
       padding-top: 20px;
     }
@@ -249,8 +296,12 @@ a {
   &__image {
     img {
       display: none;
+      @media (max-width: 575px) {
+        object-fit: contain;
+        width: 100%;
+      }
       &.choosed {
-        display: block;
+        display: flex;
         animation: imageOn 2s;
       }
     }
@@ -262,17 +313,29 @@ a {
   &__wrapper {
     background-color: #FAFAFA;
     padding-bottom: 20px;
+    @media (max-width: 767px) {
+     padding-bottom: 0; 
+    }
     h2 {
       font-size: 64px;
       margin-bottom: 20px;
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
     }
     h3 {
       margin-bottom: 40px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
     }
   }
   // &__inner {}
   &__block {
     padding: 80px 0;
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
   }
   &__image {
     display: flex;
@@ -280,6 +343,9 @@ a {
     align-items: center;
     img {
       display: none;
+      @media (max-width: 575px) {
+        width: 100%;
+      }
       &.choosed {
         display: block;
         animation: advantagesImage 2s;
@@ -288,8 +354,14 @@ a {
   }
   &__case {
     padding: 80px 0;
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
     h2 {
       margin-bottom: 40px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
     }
     p {
       max-width: 403px;
@@ -301,6 +373,10 @@ a {
         font-size: 210px;
         margin: 0 auto 40px;
         font-weight: bold;
+        @media (max-width: 767px) {
+          font-size: 140px;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -377,6 +453,9 @@ a {
     align-items: center;
     flex-direction: column;
     padding: 40px 0;
+    @media (max-width: 767px) {
+      padding: 20px 0;
+    }
     a {
       width: 100%;
     }
@@ -393,17 +472,36 @@ a {
     padding: 40px 0;
     display: flex;
     justify-content: center;
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      padding: 20px 0 50px;
+    }
     // .footer__block_text
     &_text {
       display: flex;
       margin-right: 20px;
+      @media (max-width: 767px) {
+        margin: 20px 0 0;
+        justify-content: center;
+      }
+      @media (max-width: 575px) {
+        flex-direction: column;
+        text-align: center;
+      }
       p+p {
         margin-left: 20px;
+        @media (max-width: 575px) {
+          margin: 15px 0 0;
+        }
       }
     }
   }
   // .footer__nav
   &__nav {
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
     a+a {
       margin-left: 20px;
     }
