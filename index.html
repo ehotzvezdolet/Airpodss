@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="source/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="source/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="source/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="source/images/favicon/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
@@ -14,17 +18,37 @@
 
 <body>
 
-  <!-- <header id="header" class="header">
+  <header id="header" class="header">
     <div class="header__wrapper">
       <div class="container">
         <div class="header__inner">
-          <div class="header__logo">
-            <a href="#">
-              <img src="source/images/header__logo.svg" alt="logo">
-            </a>
-          </div>
           <nav class="header__nav">
-            <ul>
+            <div class="header__logo">
+              <a href="#">
+                <img src="source/images/header__logo.svg" alt="logo">
+              </a>
+            </div>
+            <ul class="header__nav_large">
+              <li>
+                <a href="#">Info</a>
+              </li>
+              <li>
+                <a href="#">Product</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+              <li>
+                <a class="button__primary" href="#">BUY</a>
+              </li>
+            </ul>
+            <button class="header__burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="header__nav_mobile">
               <li>
                 <a href="#">Info</a>
               </li>
@@ -42,18 +66,18 @@
         </div>
       </div>
     </div>
-  </header> -->
+  </header>
 
-   <main class="main">
-    
-    <!-- <section class="banner">
+  <main class="main">
+
+    <section class="banner">
       <div class="banner__wrapper" style="background-image: url('source/images/banner__green.png')"></div>
       <div class="banner__wrapper" style="background-image: url('source/images/banner__blue.png')"></div>
       <div class="banner__wrapper choosed" style="background-image: url('source/images/banner__red.png')"></div>
       <div class="banner__wrapper" style="background-image: url('source/images/banner__white.png')"></div>
       <div class="banner__wrapper" style="background-image: url('source/images/banner__black.png')"></div>
       <h1>Airpods Max</h1>
-    </section> -->
+    </section>
 
     <section class="options">
       <div class="options__wrapper">
@@ -111,8 +135,10 @@
             <div class="description__case">
               <div class="description__text">
                 <p>The headband is made of breathable mesh, distributing the weight to reduce pressure on the head.</p>
-                <p>The stainless steel structure is wrapped in a soft-touch material to provide a remarkable harmony between resistance, flexibility and comfort.</p>
-                <p>The telescoping arms expand and stay in any position you want, allowing you to maintain fit and isolation.</p>
+                <p>The stainless steel structure is wrapped in a soft-touch material to provide a remarkable harmony
+                  between resistance, flexibility and comfort.</p>
+                <p>The telescoping arms expand and stay in any position you want, allowing you to maintain fit and
+                  isolation.</p>
               </div>
               <div class="description__image">
                 <img src="source/images/description/green.png" alt="green">
@@ -133,7 +159,8 @@
           <div class="advantages__inner">
             <div class="advantages__block">
               <h2>It even preserves the battery.</h2>
-              <h3>When stored in the sleek and lightweight <b>Smart Case</b> , AirPods Max enter a low-power state to save energy.</h3>
+              <h3>When stored in the sleek and lightweight <b>Smart Case</b> , AirPods Max enter a low-power state to
+                save energy.</h3>
               <div class="advantages__image">
                 <img src="source/images/advantages/green.png" alt="green">
                 <img src="source/images/advantages/blue.png" alt="blue">
@@ -144,14 +171,16 @@
             </div>
             <div class="advantages__case">
               <h2>Stayin' alive, stayin' alive.</h2>
-              <p><b>20</b>hours of music, movies and calls with Active Noise Cancellation and Custom Spatial Audio turned on. 5 And just 5 minutes of charging via the Lightning connector gives you an hour and a half of sound. 6</p>
+              <p><b>20</b>hours of music, movies and calls with Active Noise Cancellation and Custom Spatial Audio
+                turned on. 5 And just 5 minutes of charging via the Lightning connector gives you an hour and a half of
+                sound. 6</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="quality">
+    <section class="quality">
       <style>
         .quality__wrapper::before {
           content: '';
@@ -162,16 +191,19 @@
         <div class="container">
           <div class="quality__inner">
             <div class="quality__text">
-              <p>Custom Spatial Audio with dynamic head tracking provides a surround sound experience worthy of a movie theater.</p>
-              <p>Through built-in gyroscopes and accelerometers, AirPods Max and your iPhone, iPad, Mac or Apple TV detect the slightest head movements and keep the sound steady on your device.</p>
-              <p>And with Apple Music, custom Spatial Audio with dynamic head tracking creates a unique three-dimensional listening experience.</p>
+              <p>Custom Spatial Audio with dynamic head tracking provides a surround sound experience worthy of a movie
+                theater.</p>
+              <p>Through built-in gyroscopes and accelerometers, AirPods Max and your iPhone, iPad, Mac or Apple TV
+                detect the slightest head movements and keep the sound steady on your device.</p>
+              <p>And with Apple Music, custom Spatial Audio with dynamic head tracking creates a unique
+                three-dimensional listening experience.</p>
             </div>
             <a href="#header" class="button__secondary">Buy</a>
           </div>
         </div>
       </div>
-      
-    </section> -->
+
+    </section>
 
   </main>
 
